@@ -43,6 +43,7 @@ Los campos JSON son `id`, `nombre`, `descripcion`, `categoria`, `precio`, `stock
 
 `npm run build` genera los estáticos del frontend en `client/dist`. El servidor de desarrollo no sirve esos estáticos; configura tu servidor web o proxy de producción para publicar `client/dist` y dirigir `/api` a Express.
 
+## Capturas
 ![
    
 ](05-get-200.png) ![
@@ -54,3 +55,14 @@ Los campos JSON son `id`, `nombre`, `descripcion`, `categoria`, `precio`, `stock
 ](02-controlador.png) ![
    
 ](01-estructura.png)
+![
+   
+](10-error-500.png) ![
+   
+](09-error-404.png) ![
+   
+](08-delete-204.png) ![
+   
+](07-put-200.png) ![
+   
+](06-post-201.png)
