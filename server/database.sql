@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS db_lab10
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE db_lab10;
+
+CREATE TABLE IF NOT EXISTS productos (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(160) NOT NULL,
+  descripcion TEXT NULL,
+  categoria VARCHAR(100) NOT NULL,
+  precio DECIMAL(10, 2) NOT NULL,
+  stock INT UNSIGNED NOT NULL DEFAULT 0,
+  imagen VARCHAR(2048) NULL,
+  creado_en TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  actualizado_en TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  INDEX idx_productos_categoria (categoria),
+  INDEX idx_productos_stock (stock)
+);
